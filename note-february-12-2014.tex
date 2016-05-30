@@ -1,0 +1,169 @@
+\documentclass[epsfig,12pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{slashed}
+%\usepackage{showlabels}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                     D O C U M E N T   S E T T I N G S                        %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\baselinestretch{1.1}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\hyphenation{con-fi-ning}
+\hyphenation{Cou-lomb}
+\hyphenation{Yan-ki-e-lo-wicz}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                      C O M M O N   D E F I N I T I O N S                     %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+	Before you read my remarks inserted between your formulas below, please consider the following.
+	
+	[
+	You don't have to perform the manipulations that I describe immediately, 
+	just give it a read, it may clarify.
+	I also should ask you to use antisymmetrization on indices in $ \partial_{[\mu} A_{\nu]} $
+	and $ \partial_{[\mu} B_{\nu]} $ everywhere and in all occurences, or the coefficients will be wrong 
+	]
+
+\begin{itemize}
+\item
+	There are two auxiliary fields --- $ F_{\mu\nu} $ and $ G_{\mu\nu} $. 
+	We want to eliminate them 
+	(although we don't have to, as they are useful for Hamiltonian approach, but let us do)
+
+\item
+	In my January note I chose to eliminate them both at once. 
+	There is no miscalculation in that note, and the result is 
+	a self-dual QED with two gauge fields constrained by duality
+
+\item
+	We can choose to eliminate $ F_{\mu\nu} $ and $ G_{\mu\nu} $ one--by--one instead. 
+	Fine. Choose any of them, they are equivalent, say $ G_{\mu\nu} $. 
+	If you eliminate it, you will find that the other field --- $ F_{\mu\nu} $ ---
+	enters only linearly. 
+	That is  --- it is a Lagrange multiplier of the duality constraint.
+	And the rest of the action will again be a QED, therefore, forced to be self-dual
+
+\item
+	Finally, as you have noticed, it may be convenient to introduce a {\it sum}
+\[
+	H_{\mu\nu}  ~~=~~  F_{\mu\nu}  ~~+~~  \widetilde{G}_{\mu\nu}\,.
+\]
+	I suggest to introduce a {\it difference} as well
+\[
+	M_{\mu\nu}  ~~=~~  F_{\mu\nu}  ~~-~~  \widetilde{G}_{\mu\nu}\,.
+\]
+	Now without any elimination you'll see that the difference $ M_{\mu\nu} $ acts
+	as a Lagrange multiplier for the same duality constraint.
+	Consequent elimination of $ H_{\mu\nu} $ again leads to the same result as above
+
+\item
+	The approach of your email (copied on the next page), is a kind of mix,
+	where you introduce the sum $ H_{\mu\nu} $, while keeping $ G_{\mu\nu} $,
+	instead of trading it for the difference. Fine.
+	I argue below that it still certainly leads to the same result
+
+\end{itemize}
+
+
+	Dear  Dr. Bolokhov
+
+	Sorry,  I  have misanderstood  a  statement  of  your  previous  mail; 
+	I  thought that  your  claim  was  that  the  two  big  round  brackets  in eq. (6)  vanish  
+	but  now  I see  that  you intended  that  say  cancel  the  last  (non  big)  brackets
+	which  is  correct  if  one  use the field  eqs. (5).
+
+	In any  case  your  approach  remains inconsistent.
+	Indeed  your  lagrangian  (3)  can  be  rewritten  as 
+\[
+	L =  1/4 \partial_{\mu} A_{\nu}H^{\mu\nu} - (1/16)( H_{\mu\nu})^2
+		- 1/4 ( \partial_{\mu}A_{\nu} - 1/2 \epsilon_{\mu\nu\rho\sigma}\partial^{\rho}B^{\sigma}) \tilde G^{\mu\nu}  
+		+ k_{\mu}A^{\mu} + j_{\mu}B^{\nu}
+\]
+\textsl{\textbf{\footnotesize [you seem to be implying antisymmetrization on 
+{\boldmath $ \partial_\mu A_\nu $} and {\boldmath $ \partial_\rho B_\sigma $} here.
+	Otherwise the coefficients would be incorrect --- e.g. in the first term]}}\\
+	where  $ H =  F + \tilde G $
+	or,   integrating  over   $ H $,  
+\[
+	L =  (1/16 )(\partial_{[ \mu} A_{\nu ]})^2
+	- (1/4 )( \partial_{\mu}A_{\nu} - 1/2 \epsilon_{\mu\nu\rho\sigma}\partial^{\rho}B^{\sigma}) \tilde G^{\mu\nu} 
+	+ k_{\mu}A^{\mu} + j_{\mu}B^{\nu} 
+\]
+\textsl{\textbf{\footnotesize [Now, (implied) antisymmetrization is still missing in the second term,
+while the first term has it, but its coefficient should be ``{\boldmath $ 1/4 $}'' as well]}}\\
+	and  since 
+\[
+	\int ( 1/2 \epsilon_{\mu\nu\rho\sigma}\partial^{\rho}B^{\sigma}) \tilde A^{\mu\nu})  =  0  
+\]
+\textsl{\textbf{\footnotesize [Now this is crucial! While there is something wrong with notations in this formula, 
+	I certainly do understand what you mean:
+{\boldmath
+\[
+	\int 1/2\, \epsilon_{\mu\nu\rho\sigma}\, \partial^{\rho}B^{\sigma} \partial^\mu A^\nu ~~=~~ 0
+\]}
+	and this is not right.
+	The integrand is a total derivative, which cannot be discarded in the presence of monopoles
+]}}\\
+	your  action  is  identical  to  the  action  
+\[
+	\int L =  \int[  - (1/4 )( \partial_{\mu}A_{\nu} - 1/2 \epsilon_{\mu\nu\rho\sigma}\partial^{\rho}B^{\sigma}) K^{\mu\nu}  + 
+	k_{\mu}A^{\mu} + j_{\mu}B^{\nu}]
+\]
+\textsl{\textbf{\footnotesize [the first term vanishes, I agree, 
+	but once the above ``topological'' integral is added back, everything comes into place]}}\\
+	where  
+\[
+	K_{\mu\nu} =  \tilde G_{\mu\nu} - 1/4 (\partial_{[ \mu} A_{\nu ]})\,,
+	\qquad\qquad\textsl{\textbf{\footnotesize [in fact there is no ``{\boldmath $1/4$}'']}}\\
+\]
+which  is  clearly  inconsistent.
+
+With  my  best  regards
+
+                                     Mario  Tonin
+
+\vspace{1.0cm}
+\centerline{* \qquad\qquad\qquad\qquad * \qquad\qquad\qquad\qquad *}
+\vspace{1.0cm}
+
+
+	You could ask how is this better to have $ F_{\mu\nu} $ and $ G_{\mu\nu} $
+	if this or another way we are just enforcing the duality constraint by a Lagrange multiplier,
+	the thing I wanted to avoid from the start?
+	
+	True, there is a Lagrange multiplier. 
+	But I stress again that it carries physical sense --- first, being the fieldstrength tension
+	--- and second, being the conjugate momentum, which is useful for applying the Hamiltonian approach.
+	But let's leave this discussion for later because we just can't break through
+	the difficulties with the initial formulas
+
+
+\end{document}
